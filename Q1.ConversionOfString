@@ -1,0 +1,61 @@
+using System;
+using System.Globalization;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter a value: ");
+        string input = Console.ReadLine();
+
+        // Convert to Integer (Number)
+        if (int.TryParse(input, out int intValue))
+        {
+            Console.WriteLine($"Integer: {intValue}");
+        }
+        else
+        {
+            Console.WriteLine("Invalid integer");
+        }
+
+        // Convert to Boolean
+        if (bool.TryParse(input, out bool boolValue))
+        {
+            Console.WriteLine($"Boolean: {boolValue}");
+        }
+        else
+        {
+            Console.WriteLine("Invalid boolean (Accepted values: 'true' or 'false')");
+        }
+
+        // Convert to DateTime
+        if (DateTime.TryParse(input, out DateTime dateTimeValue))
+        {
+            Console.WriteLine($"DateTime: {dateTimeValue}");
+        }
+        else
+        {
+            Console.WriteLine("Invalid DateTime format");
+        }
+
+        // Convert to Double
+        if (double.TryParse(input, NumberStyles.Any, CultureInfo.InvariantCulture, out double doubleValue))
+        {
+            Console.WriteLine($"Double: {doubleValue}");
+        }
+        else
+        {
+            Console.WriteLine("Invalid double");
+        }
+
+        // Convert to Decimal
+        if (decimal.TryParse(input, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal decimalValue))
+        {
+            Console.WriteLine($"Decimal: {decimalValue}");
+        }
+        else
+        {
+            Console.WriteLine("Invalid decimal");
+        }
+    }
+}

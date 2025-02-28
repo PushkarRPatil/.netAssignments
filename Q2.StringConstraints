@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Taking input from user
+        Console.Write("Enter a string: ");
+        string input = Console.ReadLine();
+
+        // Checking if the string contains the word "to"
+        if (input.Contains("to", StringComparison.OrdinalIgnoreCase))
+        {
+            Console.WriteLine("The input contains the word 'hello'.");
+        }
+        else
+        {
+            Console.WriteLine("The input does NOT contain the word 'hello'.");
+        }
+    }
+}

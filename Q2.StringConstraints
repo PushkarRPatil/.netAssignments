@@ -11,11 +11,11 @@ class Program
         // Checking if the string contains the word "to"
         if (input.Contains("to", StringComparison.OrdinalIgnoreCase))
         {
-            Console.WriteLine("The input contains the word 'hello'.");
+            Console.WriteLine("The input contains the word 'to'.");
         }
         else
         {
-            Console.WriteLine("The input does NOT contain the word 'hello'.");
+            Console.WriteLine("The input does NOT contain the word 'to'.");
         }
     }
 }
